@@ -5,7 +5,6 @@ RUN apt-get update
 
 RUN apt-get install -yq zip curl wget docker.io git vim
 
-RUN apt-get clean \
- && rm -r /var/lib/apt/lists/* \
+RUN apt-get clean && rm -r /var/lib/apt/lists/*
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
